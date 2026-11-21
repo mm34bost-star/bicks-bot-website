@@ -134,6 +134,11 @@ const staticEnglish = {
 "صُنع لمجتمع Discord الخاص بك ✦":"Made for your Discord community ✦"
 };
 
+Object.assign(staticEnglish, {
+  "BICKS BOT | أكثر من مجرد بوت": "BICKS BOT | More Than Just a Bot",
+  "BICKS BOT — جميع الحقوق محفوظة": "BICKS BOT — All rights reserved"
+});
+
 const categoryEnglish = {
 "الإدارة":"Administration","الرتب":"Roles","القنوات":"Channels","البنك":"Bank",
 "السحوبات":"Giveaways","الألعاب":"Games","الردود التلقائية":"Auto Replies",
@@ -333,15 +338,29 @@ function translateStatic(lang) {
 
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   let node;
+  const translations = lang === "en"
+    ? Object.entries(staticEnglish)
+    : Object.entries(staticEnglish).map(([ar, en]) => [en, ar]);
+
   while ((node = walker.nextNode())) {
-    const original = node.nodeValue.trim();
-    if (!original) continue;
-    if (lang === "en" && staticEnglish[original]) {
-      node.nodeValue = node.nodeValue.replace(original, staticEnglish[original]);
-    } else if (lang === "ar") {
-      const reverse = Object.entries(staticEnglish).find(([ar, en]) => en === original);
-      if (reverse) node.nodeValue = node.nodeValue.replace(original, reverse[0]);
+    let value = node.nodeValue;
+    for (const [from, to] of translations) {
+      if (value.includes(from)) {
+        value = value.split(from).join(to);
+      }
     }
+    node.nodeValue = value;
+  }
+
+  document.title = lang === "en"
+    ? "BICKS BOT | More Than Just a Bot"
+    : "BICKS BOT | أكثر من مجرد بوت";
+
+  const description = document.querySelector('meta[name="description"]');
+  if (description) {
+    description.content = lang === "en"
+      ? "BICKS BOT — A Discord bot to manage and organize your community with powerful tools."
+      : "BICKS BOT — بوت ديسكورد لإدارة مجتمعك وتنظيمه بأدوات متكاملة.";
   }
 
   const searchBox = document.getElementById("search");
