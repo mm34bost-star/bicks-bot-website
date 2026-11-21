@@ -294,7 +294,7 @@ renderTabs();
 tabs.addEventListener('click', e => {
   const btn = e.target.closest('button[data-cat]');
   if (!btn) return;
-  category = btn.dataset.cat;
+  category = categories.find(c => c === btn.dataset.cat || (categoryEnglish[c] || c) === btn.dataset.cat) || 'all';
   renderTabs();
   renderCommands();
 });
