@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#090812">
+<meta name="description" content="BICKS BOT — بوت ديسكورد لإدارة مجتمعك وتنظيمه بأدوات متكاملة.">
+<title>BICKS BOT | أكثر من مجرد بوت</title>
+<style>
+:root{--bg:#090812;--panel:#121020;--panel2:#19152b;--line:#2a2342;--purple:#9b65ff;--pink:#d36bff;--text:#f6f2ff;--muted:#aaa2bd;--green:#6be3a4;--radius:22px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#39405f66,transparent 40%),radial-gradient(ellipse at 5% 30%,#25104a55,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,94%);margin:auto}.top{position:sticky;top:0;z-index:10;background:#090812d9;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.5px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--purple),#5124a8);display:grid;place-items:center;box-shadow:0 0 30px #965bff55;font-size:20px}.links{display:flex;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:white}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:14px;background:linear-gradient(110deg,#8d55f4,#bd65ed);font-weight:800;color:white;border:0;cursor:pointer;box-shadow:0 8px 28px #8d55f433;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}.btn.ghost{background:#ffffff08;border:1px solid var(--line);box-shadow:none}.hero{padding:94px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:48px;min-height:570px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #9b65ff55;background:#9b65ff15;color:#d9c5ff;border-radius:99px;padding:7px 13px;font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}h1{font-size:clamp(42px,6vw,70px);line-height:1.13;margin:20px 0 16px;letter-spacing:-2px}h1 span{background:linear-gradient(90deg,#c7a5ff,#e28aff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:18px;max-width:600px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-card{position:relative;padding:28px;border:1px solid #a17aff35;border-radius:30px;background:linear-gradient(145deg,#201735,#100e1b 70%);box-shadow:0 25px 90px #0008;overflow:hidden}.hero-card:before{content:"";position:absolute;width:240px;height:240px;background:#9458ff33;filter:blur(65px);top:-100px;left:-60px}.orb{position:relative;width:150px;height:150px;border-radius:42px;margin:8px auto 25px;background:linear-gradient(145deg,#b17aff,#5525a8);display:grid;place-items:center;font-size:64px;box-shadow:0 0 70px #9b65ff66;transform:rotate(-8deg)}.hero-card h3{text-align:center;margin:0;font-size:24px}.hero-card p{text-align:center;color:var(--muted);margin:4px 0 22px}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{background:#ffffff08;border:1px solid #ffffff12;border-radius:15px;padding:13px;text-align:center}.mini b{display:block;font-size:20px;color:#d7bdff}.mini small{color:var(--muted)}section{padding:74px 0}.section-head{text-align:center;margin-bottom:34px}.section-head h2{font-size:34px;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#171329,#100e1a);border:1px solid var(--line);border-radius:var(--radius);padding:23px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#8054c9}.ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#9b65ff20;color:#d1b7ff;font-size:22px;margin-bottom:14px}.card h3{margin:0 0 6px}.card p{margin:0;color:var(--muted);font-size:14px}.commands{background:#0e0c18;border-block:1px solid #ffffff0c}.toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:22px}.search{width:min(420px,100%);background:#171329;border:1px solid var(--line);border-radius:13px;padding:13px 15px;color:white;font:inherit;outline:none}.search:focus{border-color:var(--purple)}.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}.tab{background:#171329;border:1px solid var(--line);color:var(--muted);padding:9px 14px;border-radius:12px;cursor:pointer;font:inherit}.tab.active{background:#8c56ec2b;border-color:#9b65ff;color:white}.cmd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.cmd{padding:14px 16px;background:#171329;border:1px solid #ffffff0c;border-radius:13px;display:flex;align-items:center;justify-content:space-between;gap:10px}.cmd code{direction:ltr;color:#d8c1ff;font-size:13px}.cmd small{color:var(--muted);font-size:11px}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:25px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{text-align:center;padding:24px;background:#171329;border:1px solid var(--line);border-radius:18px}.stat b{display:block;font-size:28px;color:#d4b9ff}.stat span{color:var(--muted);font-size:13px}.status{display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:6px 12px;background:#ffffff0a;color:var(--muted);font-size:13px}.faq{max-width:820px;margin:auto;display:grid;gap:10px}details{background:#171329;border:1px solid var(--line);border-radius:15px;padding:17px 20px}summary{cursor:pointer;font-weight:800}details p{color:var(--muted);margin-bottom:0}.cta{border:1px solid #8e5ce955;background:radial-gradient(ellipse at 50% 0%,#6934a955,transparent 65%),#151124;border-radius:28px;text-align:center;padding:48px 22px}.cta h2{font-size:32px;margin:0 0 8px}.cta p{color:var(--muted);margin:0 0 22px}.footer{padding:30px 0;border-top:1px solid #ffffff12;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.notice{font-size:12px;color:#8f87a4;margin-top:16px}.mobile-menu{display:none}
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;padding:62px 0 45px;gap:30px}.hero-card{max-width:480px;width:100%;margin:auto}.grid{grid-template-columns:1fr 1fr}.cmd-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.section-head h2{font-size:29px}}@media(max-width:520px){.grid,.cmd-grid{grid-template-columns:1fr}.nav{height:66px}.nav>.btn{padding:9px 12px;font-size:12px}.hero{min-height:0}section{padding:55px 0}.lead{font-size:16px}h1{letter-spacing:-1px}.cta h2{font-size:26px}}
+</style><style>
+.cmd-modal{display:none;position:fixed;inset:0;z-index:9999;background:#000b;
+align-items:center;justify-content:center;padding:18px}
+.cmd-modal.open{display:flex}
+.cmd-modal-box{position:relative;width:100%;max-width:480px;background:#171322;
+border:1px solid #7043a8;border-radius:18px;padding:28px;color:#fff;
+box-shadow:0 20px 70px #0009}
+.modal-close{position:absolute;left:14px;top:10px;background:#30243e;
+border:0;color:white;border-radius:9px;width:34px;height:34px;font-size:23px;cursor:pointer}
+.cmd-modal-box h3{color:#c49aff;margin:12px 0}
+.cmd-modal-box p{line-height:1.9;color:#ddd}
+.cmd-modal-box code{color:#d4b2ff;background:#30243e;padding:8px 12px;border-radius:8px;display:inline-block}
+.cmd{cursor:pointer;width:100%;text-align:right;font:inherit;color:inherit;background:transparent;border:1px solid #302344;border-radius:12px;padding:14px;display:block}
+.cmd:hover{border-color:#b58aff;transform:translateY(-2px)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{cursor:pointer}
+.cmd-count{color:#bd91ff;margin-bottom:12px}
+
+#languageToggle{font:inherit;white-space:nowrap}
+html[dir="ltr"] .cmd{text-align:left}
+html[dir="ltr"] .modal-close{left:auto;right:14px}
+</style></head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home"><span class="logo">B</span><span>BICKS <span style="color:#bd91ff">BOT</span></span></a><nav class="links"><a href="#features">المميزات</a><a href="#commands">الأوامر</a><a href="#stats">الإحصائيات</a><a href="#faq">الأسئلة الشائعة</a></nav><button id="languageToggle" class="btn ghost" type="button" style="padding:9px 13px">English</button><a class="btn" href="#invite">إضافة البوت</a></div></header>
+<main id="home"><div class="wrap hero"><div><span class="eyebrow"><i class="dot"></i> مساعد مجتمعك على Discord</span><h1>ارتقِ بسيرفرك مع<br><span>BICKS BOT</span></h1><p class="lead">أدوات إدارة وتنظيم في مكان واحد، تساعدك على إدارة مجتمعك وتسهيل المهام اليومية بتجربة واضحة وسريعة.</p><div class="actions"><a class="btn" href="#invite">＋ أضف البوت إلى سيرفرك</a><a class="btn ghost" href="#commands">استكشف الأوامر ←</a></div><p class="notice">واجهة تعريفية مستقلة — بعض الروابط والإحصائيات تحتاج ربطها ببيانات البوت الفعلية.</p></div><div class="hero-card"><div class="orb">B</div><h3>BICKS BOT</h3><p>More Than a Bot</p><div class="mini-grid"><div class="mini"><b>94</b><small>أمر تمت مزامنته سابقًا</small></div><div class="mini"><b>∞</b><small>إمكانيات مجتمعك</small></div></div></div></div>
+<section id="features"><div class="wrap"><div class="section-head"><h2>كل ما يحتاجه سيرفرك</h2><p>أنظمة متعددة تساعدك على تنظيم مجتمعك وإدارته.</p></div><div class="grid"><article class="card"><div class="ic">🛡️</div><h3>إدارة وحماية</h3><p>أدوات إدارية لتنظيم الأعضاء والتعامل مع المخالفات.</p></article><article class="card"><div class="ic">🎭</div><h3>إدارة الرتب</h3><p>إضافة الرتب وسحبها وتنظيمها ونسخ إعداداتها.</p></article><article class="card"><div class="ic">🎫</div><h3>التذاكر</h3><p>تنظيم طلبات الأعضاء والدعم من خلال نظام التذاكر.</p></article><article class="card"><div class="ic">👋</div><h3>الترحيب</h3><p>أدوات إعداد رسائل الترحيب ومعاينتها وإدارتها.</p></article><article class="card"><div class="ic">📢</div><h3>القنوات والإعلانات</h3><p>أدوات للتحكم بالقنوات وإدارة إعدادات العرض والقفل.</p></article><article class="card"><div class="ic">💰</div><h3>النظام البنكي</h3><p>أوامر رصيد يومي وإيداع وسحب للأعضاء.</p></article></div></div></section>
+
+<section class="commands" id="commands">
+<div class="wrap">
+<div class="section-head">
+<h2>مركز أوامر BICKS BOT</h2>
+<p>اكتشف جميع الأوامر وابحث حسب الاسم أو الوصف أو التصنيف.</p>
+</div>
+<div class="toolbar">
+<input class="search" id="search" placeholder="ابحث عن أمر..." aria-label="ابحث عن أمر">
+<div class="tabs" id="tabs"></div>
+</div>
+<div class="cmd-grid" id="cmds"></div>
+<p class="notice" style="text-align:center">اضغط على أي أمر لعرض تفاصيله.</p>
+</div>
+<div class="cmd-modal" id="cmdModal" aria-hidden="true">
+<div class="cmd-modal-box" role="dialog" aria-modal="true">
+<button class="modal-close" id="modalClose" aria-label="إغلاق">×</button>
+<div id="modalContent"></div>
+</div>
+</div>
+</section>
+
+<section id="stats"><div class="wrap"><div class="section-head"><h2>حالة BICKS BOT</h2><p>نعرض البيانات الحقيقية بعد توصيل واجهة الموقع بواجهة API للبوت.</p></div><div class="stats"><div class="stat"><b>94</b><span>أمر تمت مزامنته سابقًا</span></div><div class="stat"><b>—</b><span>عدد السيرفرات — يحتاج ربطًا مباشرًا</span></div><div class="stat"><b>—</b><span>عدد الأعضاء — يحتاج ربطًا مباشرًا</span></div></div><p style="text-align:center;margin-top:20px"><span class="status"><i class="dot" style="background:#aaa;box-shadow:none"></i> حالة الاتصال المباشر غير مربوطة بعد</span></p></div></section>
+<section id="faq"><div class="wrap"><div class="section-head"><h2>الأسئلة الشائعة</h2><p>إجابات سريعة حول استخدام البوت.</p></div><div class="faq"><details><summary>كيف أضيف BICKS BOT إلى سيرفري؟</summary><p>استخدم زر «إضافة البوت» بعد وضع رابط دعوة OAuth2 الصحيح في إعدادات الموقع.</p></details><details><summary>لماذا لا تظهر إحصائيات السيرفرات والأعضاء؟</summary><p>لأن عرض الأرقام الحقيقية يتطلب ربط الموقع بواجهة API آمنة. لا نعرض أرقامًا تقديرية على أنها حقيقية.</p></details><details><summary>أين أجد أوامر البوت؟</summary><p>ستجد الأوامر المعروفة في قسم دليل الأوامر، ويمكن إضافة القائمة الكاملة بعد تزويدنا بها.</p></details><details><summary>كيف أتواصل مع الدعم؟</summary><p>استخدم زر سيرفر الدعم بعد إضافة رابط الدعوة الخاص بسيرفر الدعم.</p></details></div></div></section>
+<section id="invite"><div class="wrap"><div class="cta"><h2>جاهز تطوّر مجتمعك؟</h2><p>أضف BICKS BOT وابدأ بتنظيم سيرفرك بأدواته المتنوعة.</p><div class="actions" style="justify-content:center"><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1572346115171291216&permissions=6757033944935639&scope=bot%20applications.commands" target="_blank" rel="noopener">إضافة البوت إلى Discord</a><a class="btn ghost" href="https://discord.gg/eXyy2ShWhE" target="_blank" rel="noopener">سيرفر الدعم</a></div><p class="notice">تنبيه: استبدل 1572346115171291216 وeXyy2ShWhE بالقيم الصحيحة قبل مشاركة الموقع.</p></div></div></section>
+</main><footer class="footer"><div class="wrap foot"><span>© <span id="year"></span> BICKS BOT — جميع الحقوق محفوظة</span><span>صُنع لمجتمع Discord الخاص بك ✦</span></div></footer>
+<script>
+const commands = [{"name": "set_log", "cat": "الإدارة", "desc": "تحديد قناة سجلات البوت"}, {"name": "role_panel", "cat": "الرتب", "desc": "عرض رتب السيرفر"}, {"name": "role_remove", "cat": "الرتب", "desc": "حذف الرتب القابلة للإدارة"}, {"name": "copy_roles", "cat": "الرتب", "desc": "نسخ الرتب من سيرفر مصدر"}, {"name": "copy_server", "cat": "الإدارة", "desc": "نسخ هيكل السيرفر وقنواته ورتبه"}, {"name": "give", "cat": "الرتب", "desc": "إعطاء رتبة لعضو"}, {"name": "take", "cat": "الرتب", "desc": "سحب رتبة من عضو"}, {"name": "give_all", "cat": "الرتب", "desc": "إعطاء رتبة للأعضاء الممكن تعديلهم"}, {"name": "take_all", "cat": "الرتب", "desc": "سحب رتبة من الأعضاء الممكن تعديلهم"}, {"name": "kick", "cat": "الإدارة", "desc": "طرد عضو"}, {"name": "ban", "cat": "الإدارة", "desc": "حظر عضو"}, {"name": "unban", "cat": "الإدارة", "desc": "فك حظر عضو"}, {"name": "timeout", "cat": "الإدارة", "desc": "إسكات عضو لمدة محددة"}, {"name": "replace_letters", "cat": "الرتب", "desc": "استبدال أحرف في أسماء الرتب"}, {"name": "sort_roles", "cat": "الرتب", "desc": "ترتيب الرتب القابلة للإدارة"}, {"name": "lock_all", "cat": "القنوات", "desc": "قفل إرسال الرسائل في القنوات النصية"}, {"name": "unlock_all", "cat": "القنوات", "desc": "استعادة إعدادات القنوات النصية"}, {"name": "hide", "cat": "القنوات", "desc": "إخفاء قناة عن الجميع"}, {"name": "show", "cat": "القنوات", "desc": "إظهار قناة واستعادة أذوناتها"}, {"name": "balance", "cat": "البنك", "desc": "عرض الرصيد"}, {"name": "daily", "cat": "البنك", "desc": "استلام المكافأة اليومية"}, {"name": "deposit", "cat": "البنك", "desc": "إيداع العملات في البنك"}, {"name": "withdraw", "cat": "البنك", "desc": "سحب العملات من البنك"}, {"name": "transfer", "cat": "البنك", "desc": "تحويل العملات إلى عضو"}, {"name": "leaderboard", "cat": "البنك", "desc": "عرض ترتيب الأعضاء حسب الرصيد"}, {"name": "bank", "cat": "البنك", "desc": "معلومات نظام البنك"}, {"name": "giveaway_start", "cat": "السحوبات", "desc": "إنشاء سحب جديد"}, {"name": "giveaway_end", "cat": "السحوبات", "desc": "إنهاء سحب"}, {"name": "giveaway_reroll", "cat": "السحوبات", "desc": "إعادة اختيار الفائزين"}, {"name": "giveaway_cancel", "cat": "السحوبات", "desc": "إلغاء سحب"}, {"name": "game_guess", "cat": "الألعاب", "desc": "بدء لعبة تخمين"}, {"name": "game_unscramble", "cat": "الألعاب", "desc": "لعبة فك حروف الكلمة"}, {"name": "game_leaderboard", "cat": "الألعاب", "desc": "ترتيب نقاط الألعاب"}, {"name": "game_complete_word", "cat": "الألعاب", "desc": "لعبة إكمال الكلمة"}, {"name": "game_speed", "cat": "الألعاب", "desc": "بدء تحدي سرعة"}, {"name": "game_weekly", "cat": "الألعاب", "desc": "أفضل اللاعبين أسبوعيًا"}, {"name": "game_monthly", "cat": "الألعاب", "desc": "أفضل اللاعبين شهريًا"}, {"name": "game_team_start", "cat": "الألعاب", "desc": "إنشاء تحدي بين فريقين"}, {"name": "game_team_finish", "cat": "الألعاب", "desc": "إنهاء تحدي الفرق"}, {"name": "game_stats", "cat": "الألعاب", "desc": "عرض إحصائيات لاعب"}, {"name": "auto_reply_add", "cat": "الردود التلقائية", "desc": "إضافة رد تلقائي"}, {"name": "auto_reply_remove", "cat": "الردود التلقائية", "desc": "حذف رد تلقائي"}, {"name": "auto_reply_edit", "cat": "الردود التلقائية", "desc": "تعديل رد تلقائي"}, {"name": "auto_reply_list", "cat": "الردود التلقائية", "desc": "عرض الردود التلقائية"}, {"name": "auto_reply_toggle", "cat": "الردود التلقائية", "desc": "تفعيل أو إيقاف رد تلقائي"}, {"name": "apply_setup", "cat": "التقديمات", "desc": "تحديد قناة مراجعة طلبات التقديم"}, {"name": "apply_questions", "cat": "التقديمات", "desc": "تحديد أسئلة نموذج التقديم"}, {"name": "apply_question_add", "cat": "التقديمات", "desc": "إضافة سؤال لنموذج التقديم"}, {"name": "apply_question_edit", "cat": "التقديمات", "desc": "تعديل سؤال في نموذج التقديم"}, {"name": "apply_question_remove", "cat": "التقديمات", "desc": "حذف سؤال من نموذج التقديم"}, {"name": "apply_list", "cat": "التقديمات", "desc": "عرض الطلبات المعلقة"}, {"name": "apply_open", "cat": "التقديمات", "desc": "فتح التقديمات"}, {"name": "apply_close", "cat": "التقديمات", "desc": "إغلاق التقديمات"}, {"name": "apply", "cat": "التقديمات", "desc": "فتح نموذج التقديم"}, {"name": "help_admin", "cat": "المساعدة", "desc": "عرض قائمة أوامر البوت"}, {"name": "bot_servers", "cat": "مالك البوت", "desc": "عرض السيرفرات التي يوجد فيها البوت"}, {"name": "come", "cat": "الحضور والانصراف", "desc": "أمر الحضور"}, {"name": "personnel_permission", "cat": "الصلاحيات الوظيفية", "desc": "إدارة صلاحية وظيفية"}, {"name": "personnel_permissions", "cat": "الصلاحيات الوظيفية", "desc": "عرض أو إدارة الصلاحيات الوظيفية"}, {"name": "personnel_permission_remove", "cat": "الصلاحيات الوظيفية", "desc": "إزالة صلاحية وظيفية"}, {"name": "report", "cat": "التقارير", "desc": "التعامل مع التقارير"}, {"name": "violation", "cat": "المخالفات", "desc": "التعامل مع المخالفات"}, {"name": "record", "cat": "المخالفات", "desc": "تسجيل مخالفة"}, {"name": "promotion", "cat": "الترقيات والإجازات", "desc": "إجراء ترقية"}, {"name": "leave", "cat": "الترقيات والإجازات", "desc": "إدارة الإجازات"}, {"name": "approve", "cat": "مراجعة الطلبات", "desc": "قبول طلب"}, {"name": "reject", "cat": "مراجعة الطلبات", "desc": "رفض طلب"}, {"name": "statistics", "cat": "الإحصائيات", "desc": "عرض الإحصائيات"}, {"name": "search", "cat": "البحث", "desc": "البحث في بيانات النظام"}, {"name": "personnel_setup", "cat": "إعداد النظام", "desc": "إعداد نظام شؤون الموظفين"}, {"name": "setup_roles", "cat": "الرتب الذاتية", "desc": "إعداد الرتب الذاتية"}, {"name": "welcome_setup", "cat": "الترحيب", "desc": "إعداد نظام الترحيب"}, {"name": "welcome_message", "cat": "الترحيب", "desc": "إعداد رسالة الترحيب"}, {"name": "welcome_toggle", "cat": "الترحيب", "desc": "تفعيل أو إيقاف الترحيب"}, {"name": "welcome_test", "cat": "الترحيب", "desc": "اختبار رسالة الترحيب"}, {"name": "welcome_status", "cat": "الترحيب", "desc": "عرض حالة الترحيب"}, {"name": "welcome_create", "cat": "منشئ الترحيب", "desc": "إنشاء رسالة ترحيب"}, {"name": "welcome_designs", "cat": "منشئ الترحيب", "desc": "عرض تصاميم الترحيب"}, {"name": "welcome_select", "cat": "منشئ الترحيب", "desc": "اختيار تصميم ترحيب"}, {"name": "welcome_delete", "cat": "منشئ الترحيب", "desc": "حذف تصميم ترحيب"}, {"name": "welcome_builder", "cat": "منشئ الترحيب", "desc": "فتح منشئ الترحيب"}, {"name": "welcome_background", "cat": "منشئ الترحيب", "desc": "تغيير خلفية الترحيب"}, {"name": "welcome_preview", "cat": "منشئ الترحيب", "desc": "معاينة الترحيب"}, {"name": "ticket_setup", "cat": "التذاكر", "desc": "إعداد نظام التذاكر"}, {"name": "ticket_type_add", "cat": "التذاكر", "desc": "إضافة نوع تذكرة"}, {"name": "ticket_type_edit", "cat": "التذاكر", "desc": "تعديل نوع تذكرة"}, {"name": "ticket_questions", "cat": "التذاكر", "desc": "إعداد أسئلة التذكرة"}, {"name": "ticket_type_remove", "cat": "التذاكر", "desc": "حذف نوع تذكرة"}, {"name": "ticket_type_list", "cat": "التذاكر", "desc": "عرض أنواع التذاكر"}, {"name": "ticket_panel", "cat": "التذاكر", "desc": "عرض لوحة فتح التذاكر"}, {"name": "ticket_add_member", "cat": "التذاكر", "desc": "إضافة عضو إلى التذكرة"}, {"name": "ticket_remove_member", "cat": "التذاكر", "desc": "إزالة عضو من التذكرة"}, {"name": "ticket_rate", "cat": "التذاكر", "desc": "تقييم التذكرة"}, {"name": "ticket_stats", "cat": "التذاكر", "desc": "عرض إحصائيات التذاكر"}];
+const grid = document.getElementById('cmds');
+const search = document.getElementById('search');
+const tabs = document.getElementById('tabs');
+const modal = document.getElementById('cmdModal');
+const modalContent = document.getElementById('modalContent');
+
+let category = 'all';
+
+function safeText(value) {
+  return String(value).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+
+const categories = [...new Set(commands.map(c => c.cat))];
+
+
+const staticEnglish = {
+"المميزات":"Features",
+"الأوامر":"Commands",
+"الإحصائيات":"Statistics",
+"الأسئلة الشائعة":"FAQ",
+"إضافة البوت":"Add Bot",
+"مساعد مجتمعك على Discord":"Your Discord Community Assistant",
+"ارتقِ بسيرفرك مع":"Level Up Your Server with",
+"أدوات إدارة وتنظيم في مكان واحد، تساعدك على إدارة مجتمعك وتسهيل المهام اليومية بتجربة واضحة وسريعة.":"All-in-one management tools to organize your community and make everyday tasks easier.",
+"＋ أضف البوت إلى سيرفرك":"＋ Add Bot to Your Server",
+"استكشف الأوامر ←":"Explore Commands ←",
+"واجهة تعريفية مستقلة — بعض الروابط والإحصائيات تحتاج ربطها ببيانات البوت الفعلية.":"Independent landing page — some links and statistics require connection to the bot's live data.",
+"أمر تمت مزامنته سابقًا":"Commands previously synchronized",
+"إمكانيات مجتمعك":"Possibilities for your community",
+"كل ما يحتاجه سيرفرك":"Everything Your Server Needs",
+"أنظمة متعددة تساعدك على تنظيم مجتمعك وإدارته.":"Multiple systems to help organize and manage your community.",
+"إدارة وحماية":"Management & Security",
+"أدوات إدارية لتنظيم الأعضاء والتعامل مع المخالفات.":"Administrative tools to manage members and handle violations.",
+"إدارة الرتب":"Role Management",
+"إضافة الرتب وسحبها وتنظيمها ونسخ إعداداتها.":"Add, remove, organize, and copy role settings.",
+"التذاكر":"Tickets",
+"تنظيم طلبات الأعضاء والدعم من خلال نظام التذاكر.":"Organize member requests and support through a ticket system.",
+"الترحيب":"Welcome",
+"أدوات إعداد رسائل الترحيب ومعاينتها وإدارتها.":"Tools to configure, preview, and manage welcome messages.",
+"القنوات والإعلانات":"Channels & Announcements",
+"أدوات للتحكم بالقنوات وإدارة إعدادات العرض والقفل.":"Tools to manage channels, visibility, and locking settings.",
+"النظام البنكي":"Banking System",
+"أوامر رصيد يومي وإيداع وسحب للأعضاء.":"Daily rewards, deposits, and withdrawals for members.",
+"مركز أوامر BICKS BOT":"BICKS BOT Command Center",
+"اكتشف جميع الأوامر وابحث حسب الاسم أو الوصف أو التصنيف.":"Explore all commands and search by name, description, or category.",
+"ابحث عن أمر...":"Search for a command...",
+"اضغط على أي أمر لعرض تفاصيله.":"Select any command to view its details.",
+"حالة BICKS BOT":"BICKS BOT Status",
+"نعرض البيانات الحقيقية بعد توصيل واجهة الموقع بواجهة API للبوت.":"Live data will appear once the website is connected to the bot API.",
+"عدد السيرفرات — يحتاج ربطًا مباشرًا":"Servers — requires live connection",
+"عدد الأعضاء — يحتاج ربطًا مباشرًا":"Members — requires live connection",
+"حالة الاتصال المباشر غير مربوطة بعد":"Live connection is not configured yet",
+"الأسئلة الشائعة":"Frequently Asked Questions",
+"إجابات سريعة حول استخدام البوت.":"Quick answers about using the bot.",
+"كيف أضيف BICKS BOT إلى سيرفري؟":"How do I add BICKS BOT to my server?",
+"استخدم زر «إضافة البوت» بعد وضع رابط دعوة OAuth2 الصحيح في إعدادات الموقع.":"Use the Add Bot button after setting the correct OAuth2 invite link.",
+"لماذا لا تظهر إحصائيات السيرفرات والأعضاء؟":"Why are server and member statistics unavailable?",
+"لأن عرض الأرقام الحقيقية يتطلب ربط الموقع بواجهة API آمنة. لا نعرض أرقامًا تقديرية على أنها حقيقية.":"Displaying real figures requires a secure API connection. We never present estimates as real statistics.",
+"أين أجد أوامر البوت؟":"Where can I find the bot commands?",
+"ستجد الأوامر المعروفة في قسم دليل الأوامر، ويمكن إضافة القائمة الكاملة بعد تزويدنا بها.":"You can find the available commands in the command directory.",
+"كيف أتواصل مع الدعم؟":"How can I contact support?",
+"استخدم زر سيرفر الدعم بعد إضافة رابط الدعوة الخاص بسيرفر الدعم.":"Use the Support Server button to join our support community.",
+"جاهز تطوّر مجتمعك؟":"Ready to Level Up Your Community?",
+"أضف BICKS BOT وابدأ بتنظيم سيرفرك بأدواته المتنوعة.":"Add BICKS BOT and start organizing your server with its powerful tools.",
+"إضافة البوت إلى Discord":"Add Bot to Discord",
+"سيرفر الدعم":"Support Server",
+"تنبيه: استبدل 1572346115171291216 وeXyy2ShWhE بالقيم الصحيحة قبل مشاركة الموقع.":"Note: Verify the bot ID and support server invite before sharing the website.",
+"جميع الحقوق محفوظة":"All rights reserved",
+"صُنع لمجتمع Discord الخاص بك ✦":"Made for your Discord community ✦"
+};
+
+const categoryEnglish = {
+"الإدارة":"Administration","الرتب":"Roles","القنوات":"Channels","البنك":"Bank",
+"السحوبات":"Giveaways","الألعاب":"Games","الردود التلقائية":"Auto Replies",
+"التقديمات":"Applications","المساعدة":"Help","مالك البوت":"Bot Owner",
+"الحضور والانصراف":"Attendance","الصلاحيات الوظيفية":"Staff Permissions",
+"التقارير":"Reports","المخالفات":"Violations","الترقيات والإجازات":"Promotions & Leaves",
+"مراجعة الطلبات":"Application Reviews","الإحصائيات":"Statistics","البحث":"Search",
+"إعداد النظام":"System Setup","الرتب الذاتية":"Self Roles","الترحيب":"Welcome",
+"منشئ الترحيب":"Welcome Builder","التذاكر":"Tickets"
+};
+
+const commandEnglish = {
+"set_log":"Set the bot's log channel",
+"role_panel":"Display server roles",
+"role_remove":"Remove manageable roles",
+"copy_roles":"Copy roles from a source server",
+"copy_server":"Copy the server structure, channels, and roles",
+"give":"Give a role to a member",
+"take":"Remove a role from a member",
+"give_all":"Give a role to eligible members",
+"take_all":"Remove a role from eligible members",
+"kick":"Kick a member",
+"ban":"Ban a member",
+"unban":"Unban a member",
+"timeout":"Timeout a member for a specified duration",
+"replace_letters":"Replace letters in role names",
+"sort_roles":"Sort manageable roles",
+"lock_all":"Lock message sending in text channels",
+"unlock_all":"Restore text channel settings",
+"hide":"Hide a channel from everyone",
+"show":"Show a channel and restore its permissions",
+"balance":"View your balance",
+"daily":"Claim the daily reward",
+"deposit":"Deposit coins into the bank",
+"withdraw":"Withdraw coins from the bank",
+"transfer":"Transfer coins to a member",
+"leaderboard":"View members ranked by balance",
+"bank":"View bank system information",
+"giveaway_start":"Create a giveaway",
+"giveaway_end":"End a giveaway",
+"giveaway_reroll":"Reroll giveaway winners",
+"giveaway_cancel":"Cancel a giveaway",
+"game_guess":"Start a guessing game",
+"game_unscramble":"Play a word unscramble game",
+"game_leaderboard":"View the game points leaderboard",
+"game_complete_word":"Play a word completion game",
+"game_speed":"Start a speed challenge",
+"game_weekly":"View top players this week",
+"game_monthly":"View top players this month",
+"game_team_start":"Create a two-team challenge",
+"game_team_finish":"End the team challenge",
+"game_stats":"View a player's game statistics",
+"auto_reply_add":"Add an automatic reply",
+"auto_reply_remove":"Delete an automatic reply",
+"auto_reply_edit":"Edit an automatic reply",
+"auto_reply_list":"View automatic replies",
+"auto_reply_toggle":"Enable or disable an automatic reply",
+"apply_setup":"Set the application review channel",
+"apply_questions":"Set application form questions",
+"apply_question_add":"Add a question to the application form",
+"apply_question_edit":"Edit an application form question",
+"apply_question_remove":"Delete an application form question",
+"apply_list":"View pending applications",
+"apply_open":"Open applications",
+"apply_close":"Close applications",
+"apply":"Open the application form",
+"help_admin":"Display the bot command list",
+"bot_servers":"View servers where the bot is present",
+"come":"Check in for attendance",
+"personnel_permission":"Manage a staff permission",
+"personnel_permissions":"View or manage staff permissions",
+"personnel_permission_remove":"Remove a staff permission",
+"report":"Handle reports",
+"violation":"Handle violations",
+"record":"Record a violation",
+"promotion":"Process a promotion",
+"leave":"Manage leaves",
+"approve":"Approve a request",
+"reject":"Reject a request",
+"statistics":"View statistics",
+"search":"Search system data",
+"personnel_setup":"Set up the personnel system",
+"setup_roles":"Configure self-assignable roles",
+"welcome_setup":"Configure the welcome system",
+"welcome_message":"Configure the welcome message",
+"welcome_toggle":"Enable or disable welcome messages",
+"welcome_test":"Test the welcome message",
+"welcome_status":"View welcome system status",
+"welcome_create":"Create a welcome message",
+"welcome_designs":"View welcome designs",
+"welcome_select":"Select a welcome design",
+"welcome_delete":"Delete a welcome design",
+"welcome_builder":"Open the welcome builder",
+"welcome_background":"Change the welcome background",
+"welcome_preview":"Preview the welcome message",
+"ticket_setup":"Set up the ticket system",
+"ticket_type_add":"Add a ticket type",
+"ticket_type_edit":"Edit a ticket type",
+"ticket_questions":"Configure ticket questions",
+"ticket_type_remove":"Delete a ticket type",
+"ticket_type_list":"View ticket types",
+"ticket_panel":"Display the ticket panel",
+"ticket_add_member":"Add a member to a ticket",
+"ticket_remove_member":"Remove a member from a ticket",
+"ticket_rate":"Rate a ticket",
+"ticket_stats":"View ticket statistics"
+};
+
+let currentLang = "ar";
+let activeCommand = null;
+
+function renderTabs() {
+  const allLabel = currentLang === "en" ? "All" : "الكل";
+  tabs.innerHTML =
+    `<button class="tab ${category === 'all' ? 'active' : ''}" data-cat="all">${allLabel}</button>` +
+    categories.map(c =>
+      `<button class="tab ${category === c ? 'active' : ''}" data-cat="${safeText(c)}">${safeText(currentLang === "en" ? (categoryEnglish[c] || c) : c)}</button>`
+    ).join('');
+}
+
+function renderCommands() {
+  const q = search.value.trim().toLowerCase();
+  const found = commands.filter(c => {
+    const translatedCat = categoryEnglish[c.cat] || c.cat;
+    const translatedDesc = commandEnglish[c.name] || c.desc;
+    const searchable = [c.name, c.cat, c.desc, translatedCat, translatedDesc].join(' ').toLowerCase();
+    return (category === 'all' || c.cat === category) && searchable.includes(q);
+  });
+
+  grid.innerHTML = found.length
+    ? found.map(c => `
+        <button type="button" class="cmd" data-name="${safeText(c.name)}">
+          <code>/${safeText(c.name)}</code>
+          <small>${safeText(currentLang === "en" ? (commandEnglish[c.name] || c.desc) : c.desc)}</small>
+        </button>
+      `).join('')
+    : `<div class="empty">${currentLang === "en" ? "No matching commands found." : "لا توجد أوامر مطابقة لبحثك."}</div>`;
+}
+
+function renderCommandDetails(command) {
+  if (!command) return;
+  const isEnglish = currentLang === "en";
+  modalContent.innerHTML = `
+    <h3>${isEnglish ? "Command Details" : "تفاصيل الأمر"}</h3>
+    <code>/${safeText(command.name)}</code>
+    <p><strong>${isEnglish ? "Category:" : "التصنيف:"}</strong> ${safeText(isEnglish ? (categoryEnglish[command.cat] || command.cat) : command.cat)}</p>
+    <p><strong>${isEnglish ? "Description:" : "الوصف:"}</strong> ${safeText(isEnglish ? (commandEnglish[command.name] || command.desc) : command.desc)}</p>
+    <p>${isEnglish ? "Use this command through Discord slash commands. Available options will appear when you run it." : "يمكنك استخدام الأمر من خلال أوامر Discord، وستظهر خياراته المتاحة عند الاستدعاء."}</p>
+  `;
+}
+
+renderTabs();
+tabs.addEventListener('click', e => {
+  const btn = e.target.closest('button[data-cat]');
+  if (!btn) return;
+  category = btn.dataset.cat;
+  renderTabs();
+  renderCommands();
+});
+
+search.addEventListener('input', renderCommands);
+
+grid.addEventListener('click', e => {
+  const card = e.target.closest('.cmd[data-name]');
+  if (!card) return;
+
+  const command = commands.find(c => c.name === card.dataset.name);
+  if (!command) return;
+
+  activeCommand = command;
+  renderCommandDetails(command);
+
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+});
+
+function closeModal() {
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => {
+  if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+renderCommands();
+
+function translateStatic(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === "en" ? "en" : "ar";
+  document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) {
+    const original = node.nodeValue.trim();
+    if (!original) continue;
+    if (lang === "en" && staticEnglish[original]) {
+      node.nodeValue = node.nodeValue.replace(original, staticEnglish[original]);
+    } else if (lang === "ar") {
+      const reverse = Object.entries(staticEnglish).find(([ar, en]) => en === original);
+      if (reverse) node.nodeValue = node.nodeValue.replace(original, reverse[0]);
+    }
+  }
+
+  const searchBox = document.getElementById("search");
+  if (searchBox) {
+    searchBox.placeholder = lang === "en" ? "Search commands..." : "ابحث عن أمر...";
+    searchBox.setAttribute("aria-label", searchBox.placeholder);
+  }
+
+  const close = document.getElementById("modalClose");
+  if (close) close.setAttribute("aria-label", lang === "en" ? "Close" : "إغلاق");
+
+  document.getElementById("languageToggle").textContent =
+    lang === "en" ? "العربية" : "English";
+
+  localStorage.setItem("bicks-language", lang);
+  renderTabs();
+  
+  if (activeCommand && modal.classList.contains("open")) {
+    renderCommandDetails(activeCommand);
+  }
+}
+
+document.getElementById("languageToggle").addEventListener("click", () => {
+  const next = document.documentElement.lang === "ar" ? "en" : "ar";
+  translateStatic(next);
+});
+
+const savedLanguage = localStorage.getItem("bicks-language") || "ar";
+translateStatic(savedLanguage);
+
+</script></body></html>
