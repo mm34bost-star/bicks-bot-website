@@ -24,9 +24,13 @@ border:0;color:white;border-radius:9px;width:34px;height:34px;font-size:23px;cur
 .tabs{display:flex;flex-wrap:wrap;gap:8px}
 .tab{cursor:pointer}
 .cmd-count{color:#bd91ff;margin-bottom:12px}
+
+#languageToggle{font:inherit;white-space:nowrap}
+html[dir="ltr"] .cmd{text-align:left}
+html[dir="ltr"] .modal-close{left:auto;right:14px}
 </style></head>
 <body>
-<header class="top"><div class="wrap nav"><a class="brand" href="#home"><span class="logo">B</span><span>BICKS <span style="color:#bd91ff">BOT</span></span></a><nav class="links"><a href="#features">المميزات</a><a href="#commands">الأوامر</a><a href="#stats">الإحصائيات</a><a href="#faq">الأسئلة الشائعة</a></nav><a class="btn" href="#invite">إضافة البوت</a></div></header>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home"><span class="logo">B</span><span>BICKS <span style="color:#bd91ff">BOT</span></span></a><nav class="links"><a href="#features">المميزات</a><a href="#commands">الأوامر</a><a href="#stats">الإحصائيات</a><a href="#faq">الأسئلة الشائعة</a></nav><button id="languageToggle" class="btn ghost" type="button" style="padding:9px 13px">English</button><a class="btn" href="#invite">إضافة البوت</a></div></header>
 <main id="home"><div class="wrap hero"><div><span class="eyebrow"><i class="dot"></i> مساعد مجتمعك على Discord</span><h1>ارتقِ بسيرفرك مع<br><span>BICKS BOT</span></h1><p class="lead">أدوات إدارة وتنظيم في مكان واحد، تساعدك على إدارة مجتمعك وتسهيل المهام اليومية بتجربة واضحة وسريعة.</p><div class="actions"><a class="btn" href="#invite">＋ أضف البوت إلى سيرفرك</a><a class="btn ghost" href="#commands">استكشف الأوامر ←</a></div><p class="notice">واجهة تعريفية مستقلة — بعض الروابط والإحصائيات تحتاج ربطها ببيانات البوت الفعلية.</p></div><div class="hero-card"><div class="orb">B</div><h3>BICKS BOT</h3><p>More Than a Bot</p><div class="mini-grid"><div class="mini"><b>94</b><small>أمر تمت مزامنته سابقًا</small></div><div class="mini"><b>∞</b><small>إمكانيات مجتمعك</small></div></div></div></div>
 <section id="features"><div class="wrap"><div class="section-head"><h2>كل ما يحتاجه سيرفرك</h2><p>أنظمة متعددة تساعدك على تنظيم مجتمعك وإدارته.</p></div><div class="grid"><article class="card"><div class="ic">🛡️</div><h3>إدارة وحماية</h3><p>أدوات إدارية لتنظيم الأعضاء والتعامل مع المخالفات.</p></article><article class="card"><div class="ic">🎭</div><h3>إدارة الرتب</h3><p>إضافة الرتب وسحبها وتنظيمها ونسخ إعداداتها.</p></article><article class="card"><div class="ic">🎫</div><h3>التذاكر</h3><p>تنظيم طلبات الأعضاء والدعم من خلال نظام التذاكر.</p></article><article class="card"><div class="ic">👋</div><h3>الترحيب</h3><p>أدوات إعداد رسائل الترحيب ومعاينتها وإدارتها.</p></article><article class="card"><div class="ic">📢</div><h3>القنوات والإعلانات</h3><p>أدوات للتحكم بالقنوات وإدارة إعدادات العرض والقفل.</p></article><article class="card"><div class="ic">💰</div><h3>النظام البنكي</h3><p>أوامر رصيد يومي وإيداع وسحب للأعضاء.</p></article></div></div></section>
 
@@ -73,37 +77,220 @@ function safeText(value) {
 
 const categories = [...new Set(commands.map(c => c.cat))];
 
-tabs.innerHTML =
-  '<button class="tab active" data-cat="all">الكل</button>' +
-  categories.map(c =>
-    `<button class="tab" data-cat="${safeText(c)}">${safeText(c)}</button>`
-  ).join('');
+
+const staticEnglish = {
+"المميزات":"Features",
+"الأوامر":"Commands",
+"الإحصائيات":"Statistics",
+"الأسئلة الشائعة":"FAQ",
+"إضافة البوت":"Add Bot",
+"مساعد مجتمعك على Discord":"Your Discord Community Assistant",
+"ارتقِ بسيرفرك مع":"Level Up Your Server with",
+"أدوات إدارة وتنظيم في مكان واحد، تساعدك على إدارة مجتمعك وتسهيل المهام اليومية بتجربة واضحة وسريعة.":"All-in-one management tools to organize your community and make everyday tasks easier.",
+"＋ أضف البوت إلى سيرفرك":"＋ Add Bot to Your Server",
+"استكشف الأوامر ←":"Explore Commands ←",
+"واجهة تعريفية مستقلة — بعض الروابط والإحصائيات تحتاج ربطها ببيانات البوت الفعلية.":"Independent landing page — some links and statistics require connection to the bot's live data.",
+"أمر تمت مزامنته سابقًا":"Commands previously synchronized",
+"إمكانيات مجتمعك":"Possibilities for your community",
+"كل ما يحتاجه سيرفرك":"Everything Your Server Needs",
+"أنظمة متعددة تساعدك على تنظيم مجتمعك وإدارته.":"Multiple systems to help organize and manage your community.",
+"إدارة وحماية":"Management & Security",
+"أدوات إدارية لتنظيم الأعضاء والتعامل مع المخالفات.":"Administrative tools to manage members and handle violations.",
+"إدارة الرتب":"Role Management",
+"إضافة الرتب وسحبها وتنظيمها ونسخ إعداداتها.":"Add, remove, organize, and copy role settings.",
+"التذاكر":"Tickets",
+"تنظيم طلبات الأعضاء والدعم من خلال نظام التذاكر.":"Organize member requests and support through a ticket system.",
+"الترحيب":"Welcome",
+"أدوات إعداد رسائل الترحيب ومعاينتها وإدارتها.":"Tools to configure, preview, and manage welcome messages.",
+"القنوات والإعلانات":"Channels & Announcements",
+"أدوات للتحكم بالقنوات وإدارة إعدادات العرض والقفل.":"Tools to manage channels, visibility, and locking settings.",
+"النظام البنكي":"Banking System",
+"أوامر رصيد يومي وإيداع وسحب للأعضاء.":"Daily rewards, deposits, and withdrawals for members.",
+"مركز أوامر BICKS BOT":"BICKS BOT Command Center",
+"اكتشف جميع الأوامر وابحث حسب الاسم أو الوصف أو التصنيف.":"Explore all commands and search by name, description, or category.",
+"ابحث عن أمر...":"Search for a command...",
+"اضغط على أي أمر لعرض تفاصيله.":"Select any command to view its details.",
+"حالة BICKS BOT":"BICKS BOT Status",
+"نعرض البيانات الحقيقية بعد توصيل واجهة الموقع بواجهة API للبوت.":"Live data will appear once the website is connected to the bot API.",
+"عدد السيرفرات — يحتاج ربطًا مباشرًا":"Servers — requires live connection",
+"عدد الأعضاء — يحتاج ربطًا مباشرًا":"Members — requires live connection",
+"حالة الاتصال المباشر غير مربوطة بعد":"Live connection is not configured yet",
+"الأسئلة الشائعة":"Frequently Asked Questions",
+"إجابات سريعة حول استخدام البوت.":"Quick answers about using the bot.",
+"كيف أضيف BICKS BOT إلى سيرفري؟":"How do I add BICKS BOT to my server?",
+"استخدم زر «إضافة البوت» بعد وضع رابط دعوة OAuth2 الصحيح في إعدادات الموقع.":"Use the Add Bot button after setting the correct OAuth2 invite link.",
+"لماذا لا تظهر إحصائيات السيرفرات والأعضاء؟":"Why are server and member statistics unavailable?",
+"لأن عرض الأرقام الحقيقية يتطلب ربط الموقع بواجهة API آمنة. لا نعرض أرقامًا تقديرية على أنها حقيقية.":"Displaying real figures requires a secure API connection. We never present estimates as real statistics.",
+"أين أجد أوامر البوت؟":"Where can I find the bot commands?",
+"ستجد الأوامر المعروفة في قسم دليل الأوامر، ويمكن إضافة القائمة الكاملة بعد تزويدنا بها.":"You can find the available commands in the command directory.",
+"كيف أتواصل مع الدعم؟":"How can I contact support?",
+"استخدم زر سيرفر الدعم بعد إضافة رابط الدعوة الخاص بسيرفر الدعم.":"Use the Support Server button to join our support community.",
+"جاهز تطوّر مجتمعك؟":"Ready to Level Up Your Community?",
+"أضف BICKS BOT وابدأ بتنظيم سيرفرك بأدواته المتنوعة.":"Add BICKS BOT and start organizing your server with its powerful tools.",
+"إضافة البوت إلى Discord":"Add Bot to Discord",
+"سيرفر الدعم":"Support Server",
+"تنبيه: استبدل 1572346115171291216 وeXyy2ShWhE بالقيم الصحيحة قبل مشاركة الموقع.":"Note: Verify the bot ID and support server invite before sharing the website.",
+"جميع الحقوق محفوظة":"All rights reserved",
+"صُنع لمجتمع Discord الخاص بك ✦":"Made for your Discord community ✦"
+};
+
+const categoryEnglish = {
+"الإدارة":"Administration","الرتب":"Roles","القنوات":"Channels","البنك":"Bank",
+"السحوبات":"Giveaways","الألعاب":"Games","الردود التلقائية":"Auto Replies",
+"التقديمات":"Applications","المساعدة":"Help","مالك البوت":"Bot Owner",
+"الحضور والانصراف":"Attendance","الصلاحيات الوظيفية":"Staff Permissions",
+"التقارير":"Reports","المخالفات":"Violations","الترقيات والإجازات":"Promotions & Leaves",
+"مراجعة الطلبات":"Application Reviews","الإحصائيات":"Statistics","البحث":"Search",
+"إعداد النظام":"System Setup","الرتب الذاتية":"Self Roles","الترحيب":"Welcome",
+"منشئ الترحيب":"Welcome Builder","التذاكر":"Tickets"
+};
+
+const commandEnglish = {
+"set_log":"Set the bot's log channel",
+"role_panel":"Display server roles",
+"role_remove":"Remove manageable roles",
+"copy_roles":"Copy roles from a source server",
+"copy_server":"Copy the server structure, channels, and roles",
+"give":"Give a role to a member",
+"take":"Remove a role from a member",
+"give_all":"Give a role to eligible members",
+"take_all":"Remove a role from eligible members",
+"kick":"Kick a member",
+"ban":"Ban a member",
+"unban":"Unban a member",
+"timeout":"Timeout a member for a specified duration",
+"replace_letters":"Replace letters in role names",
+"sort_roles":"Sort manageable roles",
+"lock_all":"Lock message sending in text channels",
+"unlock_all":"Restore text channel settings",
+"hide":"Hide a channel from everyone",
+"show":"Show a channel and restore its permissions",
+"balance":"View your balance",
+"daily":"Claim the daily reward",
+"deposit":"Deposit coins into the bank",
+"withdraw":"Withdraw coins from the bank",
+"transfer":"Transfer coins to a member",
+"leaderboard":"View members ranked by balance",
+"bank":"View bank system information",
+"giveaway_start":"Create a giveaway",
+"giveaway_end":"End a giveaway",
+"giveaway_reroll":"Reroll giveaway winners",
+"giveaway_cancel":"Cancel a giveaway",
+"game_guess":"Start a guessing game",
+"game_unscramble":"Play a word unscramble game",
+"game_leaderboard":"View the game points leaderboard",
+"game_complete_word":"Play a word completion game",
+"game_speed":"Start a speed challenge",
+"game_weekly":"View top players this week",
+"game_monthly":"View top players this month",
+"game_team_start":"Create a two-team challenge",
+"game_team_finish":"End the team challenge",
+"game_stats":"View a player's game statistics",
+"auto_reply_add":"Add an automatic reply",
+"auto_reply_remove":"Delete an automatic reply",
+"auto_reply_edit":"Edit an automatic reply",
+"auto_reply_list":"View automatic replies",
+"auto_reply_toggle":"Enable or disable an automatic reply",
+"apply_setup":"Set the application review channel",
+"apply_questions":"Set application form questions",
+"apply_question_add":"Add a question to the application form",
+"apply_question_edit":"Edit an application form question",
+"apply_question_remove":"Delete an application form question",
+"apply_list":"View pending applications",
+"apply_open":"Open applications",
+"apply_close":"Close applications",
+"apply":"Open the application form",
+"help_admin":"Display the bot command list",
+"bot_servers":"View servers where the bot is present",
+"come":"Check in for attendance",
+"personnel_permission":"Manage a staff permission",
+"personnel_permissions":"View or manage staff permissions",
+"personnel_permission_remove":"Remove a staff permission",
+"report":"Handle reports",
+"violation":"Handle violations",
+"record":"Record a violation",
+"promotion":"Process a promotion",
+"leave":"Manage leaves",
+"approve":"Approve a request",
+"reject":"Reject a request",
+"statistics":"View statistics",
+"search":"Search system data",
+"personnel_setup":"Set up the personnel system",
+"setup_roles":"Configure self-assignable roles",
+"welcome_setup":"Configure the welcome system",
+"welcome_message":"Configure the welcome message",
+"welcome_toggle":"Enable or disable welcome messages",
+"welcome_test":"Test the welcome message",
+"welcome_status":"View welcome system status",
+"welcome_create":"Create a welcome message",
+"welcome_designs":"View welcome designs",
+"welcome_select":"Select a welcome design",
+"welcome_delete":"Delete a welcome design",
+"welcome_builder":"Open the welcome builder",
+"welcome_background":"Change the welcome background",
+"welcome_preview":"Preview the welcome message",
+"ticket_setup":"Set up the ticket system",
+"ticket_type_add":"Add a ticket type",
+"ticket_type_edit":"Edit a ticket type",
+"ticket_questions":"Configure ticket questions",
+"ticket_type_remove":"Delete a ticket type",
+"ticket_type_list":"View ticket types",
+"ticket_panel":"Display the ticket panel",
+"ticket_add_member":"Add a member to a ticket",
+"ticket_remove_member":"Remove a member from a ticket",
+"ticket_rate":"Rate a ticket",
+"ticket_stats":"View ticket statistics"
+};
+
+let currentLang = "ar";
+let activeCommand = null;
+
+function renderTabs() {
+  const allLabel = currentLang === "en" ? "All" : "الكل";
+  tabs.innerHTML =
+    `<button class="tab ${category === 'all' ? 'active' : ''}" data-cat="all">${allLabel}</button>` +
+    categories.map(c =>
+      `<button class="tab ${category === c ? 'active' : ''}" data-cat="${safeText(c)}">${safeText(currentLang === "en" ? (categoryEnglish[c] || c) : c)}</button>`
+    ).join('');
+}
 
 function renderCommands() {
   const q = search.value.trim().toLowerCase();
-
-  const found = commands.filter(c =>
-    (category === 'all' || c.cat === category) &&
-    (c.name + ' ' + c.cat + ' ' + c.desc).toLowerCase().includes(q)
-  );
+  const found = commands.filter(c => {
+    const translatedCat = categoryEnglish[c.cat] || c.cat;
+    const translatedDesc = commandEnglish[c.name] || c.desc;
+    const searchable = [c.name, c.cat, c.desc, translatedCat, translatedDesc].join(' ').toLowerCase();
+    return (category === 'all' || c.cat === category) && searchable.includes(q);
+  });
 
   grid.innerHTML = found.length
     ? found.map(c => `
-      <button type="button" class="cmd" data-name="${safeText(c.name)}">
-        <code>/${safeText(c.name)}</code>
-        <small>${safeText(c.desc)}</small>
-      </button>
-    `).join('')
-    : '<div class="empty">لا توجد أوامر مطابقة لبحثك.</div>';
+        <button type="button" class="cmd" data-name="${safeText(c.name)}">
+          <code>/${safeText(c.name)}</code>
+          <small>${safeText(currentLang === "en" ? (commandEnglish[c.name] || c.desc) : c.desc)}</small>
+        </button>
+      `).join('')
+    : `<div class="empty">${currentLang === "en" ? "No matching commands found." : "لا توجد أوامر مطابقة لبحثك."}</div>`;
 }
 
+function renderCommandDetails(command) {
+  if (!command) return;
+  const isEnglish = currentLang === "en";
+  modalContent.innerHTML = `
+    <h3>${isEnglish ? "Command Details" : "تفاصيل الأمر"}</h3>
+    <code>/${safeText(command.name)}</code>
+    <p><strong>${isEnglish ? "Category:" : "التصنيف:"}</strong> ${safeText(isEnglish ? (categoryEnglish[command.cat] || command.cat) : command.cat)}</p>
+    <p><strong>${isEnglish ? "Description:" : "الوصف:"}</strong> ${safeText(isEnglish ? (commandEnglish[command.name] || command.desc) : command.desc)}</p>
+    <p>${isEnglish ? "Use this command through Discord slash commands. Available options will appear when you run it." : "يمكنك استخدام الأمر من خلال أوامر Discord، وستظهر خياراته المتاحة عند الاستدعاء."}</p>
+  `;
+}
+
+renderTabs();
 tabs.addEventListener('click', e => {
   const btn = e.target.closest('button[data-cat]');
   if (!btn) return;
   category = btn.dataset.cat;
-  tabs.querySelectorAll('.tab').forEach(b =>
-    b.classList.toggle('active', b === btn)
-  );
+  renderTabs();
   renderCommands();
 });
 
@@ -116,13 +303,8 @@ grid.addEventListener('click', e => {
   const command = commands.find(c => c.name === card.dataset.name);
   if (!command) return;
 
-  modalContent.innerHTML = `
-    <h3>تفاصيل الأمر</h3>
-    <code>/${safeText(command.name)}</code>
-    <p><strong>التصنيف:</strong> ${safeText(command.cat)}</p>
-    <p><strong>الوصف:</strong> ${safeText(command.desc)}</p>
-    <p>يمكنك استخدام الأمر من خلال أوامر Discord، وستظهر خياراته المتاحة عند الاستدعاء.</p>
-  `;
+  activeCommand = command;
+  renderCommandDetails(command);
 
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
@@ -143,4 +325,51 @@ document.addEventListener('keydown', e => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 renderCommands();
+
+function translateStatic(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === "en" ? "en" : "ar";
+  document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) {
+    const original = node.nodeValue.trim();
+    if (!original) continue;
+    if (lang === "en" && staticEnglish[original]) {
+      node.nodeValue = node.nodeValue.replace(original, staticEnglish[original]);
+    } else if (lang === "ar") {
+      const reverse = Object.entries(staticEnglish).find(([ar, en]) => en === original);
+      if (reverse) node.nodeValue = node.nodeValue.replace(original, reverse[0]);
+    }
+  }
+
+  const searchBox = document.getElementById("search");
+  if (searchBox) {
+    searchBox.placeholder = lang === "en" ? "Search commands..." : "ابحث عن أمر...";
+    searchBox.setAttribute("aria-label", searchBox.placeholder);
+  }
+
+  const close = document.getElementById("modalClose");
+  if (close) close.setAttribute("aria-label", lang === "en" ? "Close" : "إغلاق");
+
+  document.getElementById("languageToggle").textContent =
+    lang === "en" ? "العربية" : "English";
+
+  localStorage.setItem("bicks-language", lang);
+  renderTabs();
+  
+  if (activeCommand && modal.classList.contains("open")) {
+    renderCommandDetails(activeCommand);
+  }
+}
+
+document.getElementById("languageToggle").addEventListener("click", () => {
+  const next = document.documentElement.lang === "ar" ? "en" : "ar";
+  translateStatic(next);
+});
+
+const savedLanguage = localStorage.getItem("bicks-language") || "ar";
+translateStatic(savedLanguage);
+
 </script></body></html>
