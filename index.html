@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090711">
+  <meta name="description" content="BICKS BOT — أدوات متكاملة لإدارة سيرفر Discord الخاص بك.">
+  <title>BICKS BOT | أكثر من مجرد بوت</title>
+  <style>
+    :root{--bg:#090711;--panel:#151124;--panel2:#1b1530;--purple:#9b4dff;--purple2:#6e25df;--text:#f7f3ff;--muted:#b8adc9;--line:#302345}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% 8%,#281044 0,transparent 35%),radial-gradient(ellipse at 8% 45%,#1b1030 0,transparent 32%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:#090711df;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:900;direction:ltr}
+    .mark{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#bd79ff,#6721d5);box-shadow:0 0 28px #8b3cff66;font-size:25px;font-weight:1000;color:white}
+    nav{display:flex;gap:25px;color:var(--muted);font-size:14px}nav a:hover{color:white}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:13px;background:linear-gradient(110deg,#a44cff,#7028df);font-weight:800;box-shadow:0 8px 28px #792de044;border:1px solid #ffffff22;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn.ghost{background:#ffffff08;box-shadow:none;border:1px solid #ffffff35}
+    .hero{padding:92px 0 64px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px;min-height:530px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid #633b8a;border-radius:99px;color:#d8c0ff;background:#9a4bff12;font-size:13px}
+    h1{font-size:clamp(48px,7vw,82px);line-height:1.08;margin:22px 0 18px;letter-spacing:-2px;direction:ltr;text-align:right}
+    h1 span{color:#ad69ff;text-shadow:0 0 30px #8c35ff66}.lead{color:var(--muted);font-size:18px;max-width:600px;margin:0 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px}.visual{min-height:350px;display:grid;place-items:center;position:relative}
+    .orb{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d8b5ff,#8a38eb 28%,#37145f 58%,#100a1b 72%);box-shadow:0 0 80px #8b37ff55,inset -20px -24px 55px #090711aa;display:grid;place-items:center;border:1px solid #d5aaff55;position:relative}
+    .orb:before,.orb:after{content:"";position:absolute;inset:-25px;border:1px solid #a85aff77;border-radius:50%;transform:rotate(-24deg) scaleY(.34)}.orb:after{transform:rotate(34deg) scaleY(.25);border-color:#d4a2ff66}
+    .botface{font-size:112px;filter:drop-shadow(0 12px 18px #160626);direction:ltr}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:5px auto 75px}
+    .stat,.feature{background:linear-gradient(145deg,#1a1429cc,#100d1b);border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}
+    .stat strong{display:block;font-size:25px;color:#c18aff}.stat small{color:var(--muted)}
+    section{padding:25px 0 65px}.section-title{text-align:center;font-size:30px;margin:0 0 8px}.section-sub{text-align:center;color:var(--muted);margin:0 0 30px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{text-align:right;padding:24px}.ico{font-size:27px}.feature h3{margin:8px 0 5px}.feature p{margin:0;color:var(--muted);font-size:14px}
+    .cta{margin:20px auto 75px;padding:35px;border-radius:23px;text-align:center;background:linear-gradient(110deg,#281347,#151025);border:1px solid #633b8a}
+    .cta h2{margin:0 0 8px}.cta p{color:var(--muted);margin:0 0 20px}
+    footer{border-top:1px solid #ffffff15;padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;text-align:center;padding:60px 0 35px;gap:25px}.lead{margin-inline:auto}.actions{justify-content:center}.visual{min-height:280px}.orb{width:250px}.botface{font-size:85px}.stats{grid-template-columns:1fr;margin-bottom:45px}.features{grid-template-columns:1fr}.section-title{font-size:26px}.cta{padding:28px 18px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#"><span class="mark">B</span><span>BICKS <span style="color:#ad69ff">BOT</span></span></a>
+  <nav><a href="#home">الرئيسية</a><a href="#features">المميزات</a><a href="#commands">الأوامر</a><a href="#support">الدعم</a></nav>
+  <a class="btn" href="#invite">إضافة البوت</a>
+</div></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <span class="pill">✦ بوت ديسكورد متعدد الأنظمة</span>
+      <h1>BICKS <span>BOT</span></h1>
+      <p class="lead">أكثر من مجرد بوت — أدوات تساعدك على إدارة سيرفرك وتنظيم مجتمعك بسهولة، من مكان واحد.</p>
+      <div class="actions"><a class="btn" href="#invite">＋ إضافة البوت الآن</a><a class="btn ghost" href="#features">اكتشف المميزات　↓</a></div>
+    </div>
+    <div class="visual"><div class="orb"><div class="botface">♟</div></div></div>
+  </div>
+  <div class="wrap stats">
+    <div class="stat"><strong>24/7</strong><small>جاهزية الخدمة</small></div>
+    <div class="stat"><strong>متعدد</strong><small>أنظمة الإدارة</small></div>
+    <div class="stat"><strong>سهل</strong><small>الاستخدام والإعداد</small></div>
+  </div>
+  <section class="wrap" id="features">
+    <h2 class="section-title">مميزات BICKS BOT</h2><p class="section-sub">كل ما تحتاجه لإدارة سيرفرك في مكان واحد</p>
+    <div class="features">
+      <article class="feature"><div class="ico">🛡️</div><h3>الحماية والإدارة</h3><p>أدوات إدارية تساعد على تنظيم السيرفر وإدارة الأعضاء.</p></article>
+      <article class="feature"><div class="ico">🎫</div><h3>نظام التذاكر</h3><p>تنظيم طلبات الدعم والتواصل مع فريق الإدارة.</p></article>
+      <article class="feature"><div class="ico">📝</div><h3>التقديمات</h3><p>إدارة طلبات الانضمام ومراجعتها بطريقة مرتبة.</p></article>
+      <article class="feature"><div class="ico">📊</div><h3>الإحصائيات</h3><p>متابعة نشاط السيرفر وأهم المعلومات.</p></article>
+      <article class="feature"><div class="ico">🏅</div><h3>الرتب والمكافآت</h3><p>أدوات لتنظيم الرتب وتوزيعها حسب إعداداتك.</p></article>
+      <article class="feature"><div class="ico">⚙️</div><h3>إعدادات مرنة</h3><p>إعداد الأنظمة بما يناسب احتياج مجتمعك.</p></article>
+    </div>
+  </section>
+  <section class="wrap" id="commands"><h2 class="section-title">أوامر البوت</h2><p class="section-sub">استكشف الأوامر المتاحة داخل BICKS BOT من خلال Discord.</p></section>
+  <div class="wrap cta" id="invite"><h2>جاهز تضيف BICKS BOT إلى سيرفرك؟</h2><p>ابدأ بتنظيم مجتمعك والاستفادة من أدوات البوت.</p><a class="btn" href="#" aria-label="رابط إضافة البوت">رابط إضافة البوت — أضف الرابط هنا</a></div>
+  <section class="wrap" id="support"><h2 class="section-title">تحتاج مساعدة؟</h2><p class="section-sub">أضف رابط سيرفر الدعم هنا حتى يتمكن المستخدمون من التواصل مع فريقك.</p></section>
+</main>
+<footer><div class="wrap foot"><span>© BICKS BOT — جميع الحقوق محفوظة</span><span>صُنع لمجتمع Discord 💜</span></div></footer>
+</body></html>
