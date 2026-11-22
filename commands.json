@@ -390,6 +390,16 @@
     "desc": "عرض السيرفرات التي يوجد فيها البوت"
   },
   {
+    "name": "auto_reply",
+    "cat": "أوامر جديدة",
+    "desc": "Manage automatic replies"
+  },
+  {
+    "name": "auto_role",
+    "cat": "أوامر جديدة",
+    "desc": "التحكم في نظام الرتبة التلقائية"
+  },
+  {
     "name": "hot_test",
     "cat": "أوامر جديدة",
     "desc": "اختبار تحميل أمر جديد دون إعادة تشغيل"
@@ -418,15 +428,5 @@
     "name": "say",
     "cat": "أوامر جديدة",
     "desc": "إرسال رسالة عادية أو Embed باسم BICKS BOT"
-  },
-  {
-    "name": "auto_role",
-    "cat": "أوامر جديدة",
-    "desc": "التحكم في نظام الرتبة التلقائية"
-  },
-  {
-    "name": "auto_reply",
-    "cat": "أوامر جديدة",
-    "desc": "Manage automatic replies"
   }
 ]
