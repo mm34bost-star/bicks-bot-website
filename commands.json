@@ -428,15 +428,5 @@
     "name": "auto_reply",
     "cat": "أوامر جديدة",
     "desc": "Manage automatic replies"
-  },
-  {
-    "name": "team_event_start",
-    "cat": "أوامر جديدة",
-    "desc": "إنشاء تحدي بين فريقين"
-  },
-  {
-    "name": "team_event_finish",
-    "cat": "أوامر جديدة",
-    "desc": "إنهاء تحدي الفرق وتحديد الفريق الفائز"
   }
 ]
