@@ -335,56 +335,6 @@
     "desc": "إلغاء سحب"
   },
   {
-    "name": "game_guess",
-    "cat": "الألعاب",
-    "desc": "بدء لعبة تخمين"
-  },
-  {
-    "name": "game_unscramble",
-    "cat": "الألعاب",
-    "desc": "لعبة فك حروف الكلمة"
-  },
-  {
-    "name": "game_leaderboard",
-    "cat": "الألعاب",
-    "desc": "ترتيب نقاط الألعاب"
-  },
-  {
-    "name": "game_complete_word",
-    "cat": "الألعاب",
-    "desc": "لعبة إكمال الكلمة"
-  },
-  {
-    "name": "game_speed",
-    "cat": "الألعاب",
-    "desc": "بدء تحدي سرعة"
-  },
-  {
-    "name": "game_weekly",
-    "cat": "الألعاب",
-    "desc": "أفضل اللاعبين أسبوعيًا"
-  },
-  {
-    "name": "game_monthly",
-    "cat": "الألعاب",
-    "desc": "أفضل اللاعبين شهريًا"
-  },
-  {
-    "name": "game_team_start",
-    "cat": "الألعاب",
-    "desc": "إنشاء تحدي بين فريقين"
-  },
-  {
-    "name": "game_team_finish",
-    "cat": "الألعاب",
-    "desc": "إنهاء تحدي الفرق"
-  },
-  {
-    "name": "game_stats",
-    "cat": "الألعاب",
-    "desc": "عرض إحصائيات لاعب"
-  },
-  {
     "name": "apply_setup",
     "cat": "التقديمات",
     "desc": "تحديد قناة مراجعة طلبات التقديم"
@@ -478,5 +428,15 @@
     "name": "auto_reply",
     "cat": "أوامر جديدة",
     "desc": "Manage automatic replies"
+  },
+  {
+    "name": "team_event_start",
+    "cat": "أوامر جديدة",
+    "desc": "إنشاء تحدي بين فريقين"
+  },
+  {
+    "name": "team_event_finish",
+    "cat": "أوامر جديدة",
+    "desc": "إنهاء تحدي الفرق وتحديد الفريق الفائز"
   }
 ]
