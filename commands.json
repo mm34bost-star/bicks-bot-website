@@ -1,5 +1,195 @@
 [
   {
+    "name": "ticket_setup",
+    "cat": "التذاكر",
+    "desc": "إعداد نظام التذاكر"
+  },
+  {
+    "name": "ticket_type_add",
+    "cat": "التذاكر",
+    "desc": "إضافة نوع تذكرة"
+  },
+  {
+    "name": "ticket_type_edit",
+    "cat": "التذاكر",
+    "desc": "تعديل نوع تذكرة"
+  },
+  {
+    "name": "ticket_questions",
+    "cat": "التذاكر",
+    "desc": "إعداد أسئلة التذكرة"
+  },
+  {
+    "name": "ticket_type_remove",
+    "cat": "التذاكر",
+    "desc": "حذف نوع تذكرة"
+  },
+  {
+    "name": "ticket_type_list",
+    "cat": "التذاكر",
+    "desc": "عرض أنواع التذاكر"
+  },
+  {
+    "name": "ticket_panel",
+    "cat": "التذاكر",
+    "desc": "عرض لوحة فتح التذاكر"
+  },
+  {
+    "name": "ticket_add_member",
+    "cat": "التذاكر",
+    "desc": "إضافة عضو إلى التذكرة"
+  },
+  {
+    "name": "ticket_remove_member",
+    "cat": "التذاكر",
+    "desc": "إزالة عضو من التذكرة"
+  },
+  {
+    "name": "ticket_rate",
+    "cat": "التذاكر",
+    "desc": "تقييم التذكرة"
+  },
+  {
+    "name": "ticket_stats",
+    "cat": "التذاكر",
+    "desc": "عرض إحصائيات التذاكر"
+  },
+  {
+    "name": "come",
+    "cat": "الحضور والانصراف",
+    "desc": "أمر الحضور"
+  },
+  {
+    "name": "personnel_permission",
+    "cat": "الصلاحيات الوظيفية",
+    "desc": "إدارة صلاحية وظيفية"
+  },
+  {
+    "name": "personnel_permissions",
+    "cat": "الصلاحيات الوظيفية",
+    "desc": "عرض أو إدارة الصلاحيات الوظيفية"
+  },
+  {
+    "name": "personnel_permission_remove",
+    "cat": "الصلاحيات الوظيفية",
+    "desc": "إزالة صلاحية وظيفية"
+  },
+  {
+    "name": "personnel_setup",
+    "cat": "إعداد النظام",
+    "desc": "إعداد نظام شؤون الموظفين"
+  },
+  {
+    "name": "report",
+    "cat": "التقارير",
+    "desc": "التعامل مع التقارير"
+  },
+  {
+    "name": "violation",
+    "cat": "المخالفات",
+    "desc": "التعامل مع المخالفات"
+  },
+  {
+    "name": "record",
+    "cat": "المخالفات",
+    "desc": "تسجيل مخالفة"
+  },
+  {
+    "name": "promotion",
+    "cat": "الترقيات والإجازات",
+    "desc": "إجراء ترقية"
+  },
+  {
+    "name": "leave",
+    "cat": "الترقيات والإجازات",
+    "desc": "إدارة الإجازات"
+  },
+  {
+    "name": "approve",
+    "cat": "مراجعة الطلبات",
+    "desc": "قبول طلب"
+  },
+  {
+    "name": "reject",
+    "cat": "مراجعة الطلبات",
+    "desc": "رفض طلب"
+  },
+  {
+    "name": "statistics",
+    "cat": "الإحصائيات",
+    "desc": "عرض الإحصائيات"
+  },
+  {
+    "name": "search",
+    "cat": "البحث",
+    "desc": "البحث في بيانات النظام"
+  },
+  {
+    "name": "setup_roles",
+    "cat": "الرتب الذاتية",
+    "desc": "إعداد الرتب الذاتية"
+  },
+  {
+    "name": "welcome_setup",
+    "cat": "الترحيب",
+    "desc": "إعداد نظام الترحيب"
+  },
+  {
+    "name": "welcome_message",
+    "cat": "الترحيب",
+    "desc": "إعداد رسالة الترحيب"
+  },
+  {
+    "name": "welcome_toggle",
+    "cat": "الترحيب",
+    "desc": "تفعيل أو إيقاف الترحيب"
+  },
+  {
+    "name": "welcome_test",
+    "cat": "الترحيب",
+    "desc": "اختبار رسالة الترحيب"
+  },
+  {
+    "name": "welcome_status",
+    "cat": "الترحيب",
+    "desc": "عرض حالة الترحيب"
+  },
+  {
+    "name": "welcome_create",
+    "cat": "منشئ الترحيب",
+    "desc": "إنشاء رسالة ترحيب"
+  },
+  {
+    "name": "welcome_designs",
+    "cat": "منشئ الترحيب",
+    "desc": "عرض تصاميم الترحيب"
+  },
+  {
+    "name": "welcome_select",
+    "cat": "منشئ الترحيب",
+    "desc": "اختيار تصميم ترحيب"
+  },
+  {
+    "name": "welcome_delete",
+    "cat": "منشئ الترحيب",
+    "desc": "حذف تصميم ترحيب"
+  },
+  {
+    "name": "welcome_builder",
+    "cat": "منشئ الترحيب",
+    "desc": "فتح منشئ الترحيب"
+  },
+  {
+    "name": "welcome_background",
+    "cat": "منشئ الترحيب",
+    "desc": "تغيير خلفية الترحيب"
+  },
+  {
+    "name": "welcome_preview",
+    "cat": "منشئ الترحيب",
+    "desc": "معاينة الترحيب"
+  },
+  {
     "name": "set_log",
     "cat": "الإدارة",
     "desc": "تحديد قناة سجلات البوت"
@@ -18,11 +208,6 @@
     "name": "copy_roles",
     "cat": "الرتب",
     "desc": "نسخ الرتب من سيرفر مصدر"
-  },
-  {
-    "name": "copy_server",
-    "cat": "الإدارة",
-    "desc": "نسخ هيكل السيرفر وقنواته ورتبه"
   },
   {
     "name": "give",
@@ -278,196 +463,6 @@
     "name": "bot_servers",
     "cat": "مالك البوت",
     "desc": "عرض السيرفرات التي يوجد فيها البوت"
-  },
-  {
-    "name": "come",
-    "cat": "الحضور والانصراف",
-    "desc": "أمر الحضور"
-  },
-  {
-    "name": "personnel_permission",
-    "cat": "الصلاحيات الوظيفية",
-    "desc": "إدارة صلاحية وظيفية"
-  },
-  {
-    "name": "personnel_permissions",
-    "cat": "الصلاحيات الوظيفية",
-    "desc": "عرض أو إدارة الصلاحيات الوظيفية"
-  },
-  {
-    "name": "personnel_permission_remove",
-    "cat": "الصلاحيات الوظيفية",
-    "desc": "إزالة صلاحية وظيفية"
-  },
-  {
-    "name": "report",
-    "cat": "التقارير",
-    "desc": "التعامل مع التقارير"
-  },
-  {
-    "name": "violation",
-    "cat": "المخالفات",
-    "desc": "التعامل مع المخالفات"
-  },
-  {
-    "name": "record",
-    "cat": "المخالفات",
-    "desc": "تسجيل مخالفة"
-  },
-  {
-    "name": "promotion",
-    "cat": "الترقيات والإجازات",
-    "desc": "إجراء ترقية"
-  },
-  {
-    "name": "leave",
-    "cat": "الترقيات والإجازات",
-    "desc": "إدارة الإجازات"
-  },
-  {
-    "name": "approve",
-    "cat": "مراجعة الطلبات",
-    "desc": "قبول طلب"
-  },
-  {
-    "name": "reject",
-    "cat": "مراجعة الطلبات",
-    "desc": "رفض طلب"
-  },
-  {
-    "name": "statistics",
-    "cat": "الإحصائيات",
-    "desc": "عرض الإحصائيات"
-  },
-  {
-    "name": "search",
-    "cat": "البحث",
-    "desc": "البحث في بيانات النظام"
-  },
-  {
-    "name": "personnel_setup",
-    "cat": "إعداد النظام",
-    "desc": "إعداد نظام شؤون الموظفين"
-  },
-  {
-    "name": "setup_roles",
-    "cat": "الرتب الذاتية",
-    "desc": "إعداد الرتب الذاتية"
-  },
-  {
-    "name": "welcome_setup",
-    "cat": "الترحيب",
-    "desc": "إعداد نظام الترحيب"
-  },
-  {
-    "name": "welcome_message",
-    "cat": "الترحيب",
-    "desc": "إعداد رسالة الترحيب"
-  },
-  {
-    "name": "welcome_toggle",
-    "cat": "الترحيب",
-    "desc": "تفعيل أو إيقاف الترحيب"
-  },
-  {
-    "name": "welcome_test",
-    "cat": "الترحيب",
-    "desc": "اختبار رسالة الترحيب"
-  },
-  {
-    "name": "welcome_status",
-    "cat": "الترحيب",
-    "desc": "عرض حالة الترحيب"
-  },
-  {
-    "name": "welcome_create",
-    "cat": "منشئ الترحيب",
-    "desc": "إنشاء رسالة ترحيب"
-  },
-  {
-    "name": "welcome_designs",
-    "cat": "منشئ الترحيب",
-    "desc": "عرض تصاميم الترحيب"
-  },
-  {
-    "name": "welcome_select",
-    "cat": "منشئ الترحيب",
-    "desc": "اختيار تصميم ترحيب"
-  },
-  {
-    "name": "welcome_delete",
-    "cat": "منشئ الترحيب",
-    "desc": "حذف تصميم ترحيب"
-  },
-  {
-    "name": "welcome_builder",
-    "cat": "منشئ الترحيب",
-    "desc": "فتح منشئ الترحيب"
-  },
-  {
-    "name": "welcome_background",
-    "cat": "منشئ الترحيب",
-    "desc": "تغيير خلفية الترحيب"
-  },
-  {
-    "name": "welcome_preview",
-    "cat": "منشئ الترحيب",
-    "desc": "معاينة الترحيب"
-  },
-  {
-    "name": "ticket_setup",
-    "cat": "التذاكر",
-    "desc": "إعداد نظام التذاكر"
-  },
-  {
-    "name": "ticket_type_add",
-    "cat": "التذاكر",
-    "desc": "إضافة نوع تذكرة"
-  },
-  {
-    "name": "ticket_type_edit",
-    "cat": "التذاكر",
-    "desc": "تعديل نوع تذكرة"
-  },
-  {
-    "name": "ticket_questions",
-    "cat": "التذاكر",
-    "desc": "إعداد أسئلة التذكرة"
-  },
-  {
-    "name": "ticket_type_remove",
-    "cat": "التذاكر",
-    "desc": "حذف نوع تذكرة"
-  },
-  {
-    "name": "ticket_type_list",
-    "cat": "التذاكر",
-    "desc": "عرض أنواع التذاكر"
-  },
-  {
-    "name": "ticket_panel",
-    "cat": "التذاكر",
-    "desc": "عرض لوحة فتح التذاكر"
-  },
-  {
-    "name": "ticket_add_member",
-    "cat": "التذاكر",
-    "desc": "إضافة عضو إلى التذكرة"
-  },
-  {
-    "name": "ticket_remove_member",
-    "cat": "التذاكر",
-    "desc": "إزالة عضو من التذكرة"
-  },
-  {
-    "name": "ticket_rate",
-    "cat": "التذاكر",
-    "desc": "تقييم التذكرة"
-  },
-  {
-    "name": "ticket_stats",
-    "cat": "التذاكر",
-    "desc": "عرض إحصائيات التذاكر"
   },
   {
     "name": "hot_test",

@@ -55,7 +55,7 @@ html[dir="ltr"] .modal-close{left:auto;right:14px}
 </div>
 </section>
 
-<section id="stats"><div class="wrap"><div class="section-head"><h2>حالة BICKS BOT</h2><p>نعرض البيانات الحقيقية بعد توصيل واجهة الموقع بواجهة API للبوت.</p></div><div class="stats"><div class="stat"><b>94</b><span>أمر تمت مزامنته سابقًا</span></div><div class="stat"><b>—</b><span>عدد السيرفرات — يحتاج ربطًا مباشرًا</span></div><div class="stat"><b>—</b><span>عدد الأعضاء — يحتاج ربطًا مباشرًا</span></div></div><p style="text-align:center;margin-top:20px"><span class="status"><i class="dot" style="background:#aaa;box-shadow:none"></i> حالة الاتصال المباشر غير مربوطة بعد</span></p></div></section>
+<section id="stats"><div class="wrap"><div class="section-head"><h2>حالة BICKS BOT</h2><p>نعرض البيانات الحقيقية بعد توصيل واجهة الموقع بواجهة API للبوت.</p></div><div class="stats"><div class="stat"><b id="commandCount">—</b><span>أمر متاح حاليًا</span></div><div class="stat"><b>—</b><span>عدد السيرفرات — يحتاج ربطًا مباشرًا</span></div><div class="stat"><b>—</b><span>عدد الأعضاء — يحتاج ربطًا مباشرًا</span></div></div><p style="text-align:center;margin-top:20px"><span class="status"><i class="dot" style="background:#aaa;box-shadow:none"></i> حالة الاتصال المباشر غير مربوطة بعد</span></p></div></section>
 <section id="faq"><div class="wrap"><div class="section-head"><h2>الأسئلة الشائعة</h2><p>إجابات سريعة حول استخدام البوت.</p></div><div class="faq"><details><summary>كيف أضيف BICKS BOT إلى سيرفري؟</summary><p>اضغط على زر إضافة البوت للانتقال إلى صفحة دعوته الرسمية على Discord.</p></details><details><summary>لماذا لا تظهر إحصائيات السيرفرات والأعضاء؟</summary><p>لأن عرض الأرقام الحقيقية يتطلب ربط الموقع بواجهة API آمنة. لا نعرض أرقامًا تقديرية على أنها حقيقية.</p></details><details><summary>أين أجد أوامر البوت؟</summary><p>تصفح الأوامر المتاحة وابحث حسب الاسم أو الوصف أو التصنيف.</p></details><details><summary>كيف أتواصل مع الدعم؟</summary><p>اضغط على زر سيرفر الدعم للانضمام إلى مجتمع الدعم.</p></details></div></div></section>
 <section id="invite"><div class="wrap"><div class="cta"><h2>جاهز تطوّر مجتمعك؟</h2><p>أضف BICKS BOT وابدأ بتنظيم سيرفرك بأدواته المتنوعة.</p><div class="actions" style="justify-content:center"><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1572346115171291216&permissions=6757033944935639&scope=bot%20applications.commands" target="_blank" rel="noopener">إضافة البوت إلى Discord</a><a class="btn ghost" href="https://discord.gg/QQqAjmCfTv" target="_blank" rel="noopener">سيرفر الدعم</a></div><p class="notice">روابط دعوة البوت وسيرفر الدعم الرسمية جاهزة للاستخدام.</p></div></div></section>
 </main><footer class="footer"><div class="wrap foot"><span>© <span id="year"></span> BICKS BOT — جميع الحقوق محفوظة</span><span>صُنع لمجتمع Discord الخاص بك ✦</span></div></footer>
@@ -335,6 +335,8 @@ function loadCommands() {
     .then(data => {
       if (!Array.isArray(data)) throw new Error('Invalid commands list');
       commands = data.filter(c => c && c.name && c.cat && c.desc);
+      const countElement = document.getElementById('commandCount');
+      if (countElement) countElement.textContent = commands.length;
       categories = [...new Set(commands.map(c => c.cat))];
       renderTabs();
       renderCommands();
